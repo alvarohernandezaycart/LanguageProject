@@ -1,0 +1,14 @@
+<div class="container container--tabopts">
+	<div class="tabopts">
+		<ul class="tabopts__list">
+			<li class="tabopt" ng-class="{'tabopt--current': at('summary')}"id="tabopt--summary">
+				<a href="#/summary"> <span
+					aria-hidden="true"
+					class="tabopt__icon icon-summary icon--standalone icon-x3"></span>
+					<span class="tabopt__name">summary</span>
+			</a></li>
+		</ul>
+	</div>
+
+	<div ng-view class="content" role="main"></div>
+</div>

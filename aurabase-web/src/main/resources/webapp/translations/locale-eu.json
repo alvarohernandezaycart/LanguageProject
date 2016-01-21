@@ -1,0 +1,47 @@
+{
+    "test": {
+		"createButton": "Añadir nueva pero en Euskera",
+		"title": "Tests",
+		"title_create": "Crear campaña",
+		"title_edit": "Editar campaña"
+	},
+	
+	"gen": {
+		"acquisition": "Acquisition",
+		"num_acquisition_points": "Nº puntos de adquisición",
+		"test": "Test",
+		"origin_and_destination": "Origen - destino",
+		"origin": "Origen",
+		"destination": "Destino",
+		"num_acquisition_points": "Nº puntos de Adquisición",
+		"num_acquisition_patterns": "Nº patrones de adquisición",
+		"total_points": "Puntos totales",
+		"real_duration": "Duración real",
+		
+		"add_new": "Añadir nuevo",
+		"confirmation": "Confirmación",
+		"delete": "Eliminar",
+		"cancel": "Cancelar",
+
+		"campaignTitle": "Campaña",
+
+		"save": "Guardar",
+		"update": "Actualizar",
+		
+		"time_from_output": "Tiempo desde salida (minutos)",
+		"total_duration": "Duración total (minutos)",
+		"acquisition_type": "Tipo de adquisición",
+		"time_between_acquisitions": "Tiempo entre adquisiciones (minutos)",
+		"acquisition_duration": "Duración adquisición (segundos)",
+		"real_duration_format": "Duración real (mm:ss)",
+		"continously": "Continua",
+		"periodic": "Periodica",
+		
+		"acq_type_1": "Contínua",
+		"acq_type_2": "Periódica",
+		"fleet": "Flota",
+		"unit": "Unidad",
+		"kilometers": "Kilómetros",
+		"operation_id": "ID Operación"
+	}
+}

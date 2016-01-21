@@ -1,0 +1,136 @@
+{
+	"gen": {
+		"acquisition": "Acquisition",
+		"num_acquisition_points": "Nº puntos de adquisición",
+		"test": "Test",
+		"origin_and_destination": "Origen - destino",
+		"origin": "Origen",
+		"destination": "Destino",
+		"num_acquisition_points": "Nº puntos de Adquisición",
+		"num_acquisition_patterns": "Nº patrones de adquisición",
+		"total_points": "Puntos totales",
+		"real_duration": "Duración real",
+		
+		"add_new": "Añadir nuevo",
+		"confirmation": "Confirmación",
+		"delete": "Eliminar",
+		"cancel": "Cancelar",
+
+		"campaignTitle": "Campaña",
+
+		"save": "Guardar",
+		"update": "Actualizar",
+		
+		"time_from_output": "Tiempo desde salida (minutos)",
+		"total_duration": "Duración total (minutos)",
+		"acquisition_type": "Tipo de adquisición",
+		"time_between_acquisitions": "Tiempo entre adquisiciones (minutos)",
+		"acquisition_duration": "Duración adquisición (segundos)",
+		"real_duration_format": "Duración real (mm:ss)",
+		"continously": "Continua",
+		"periodic": "Periodica",
+		
+		"acq_type_1": "Contínua",
+		"acq_type_2": "Periódica",
+		"fleet": "Flota",
+		"unit": "Unidad",
+		"kilometers": "Kilómetros",
+		"operation_id": "ID Operación",
+		"table":"Tabla"
+	},
+	
+	"patterns": {
+		"title": "Patrones",
+		"title_create": "Alta de patrón de adquisición",
+		"title_edit": "Edición de patrón de adquisición",
+		"acquisition": "Patrones de adquisición",
+		
+		"delete": {
+			"message": "Se va a eliminar el patrón de acquisición seleccionado y toda su información asociada. ¿Está seguro?"
+		}
+	},
+
+	"campaign": {
+		"headerTitle": "Lista de Campañas",
+		"createButton": "Añadir nueva",
+		"title": "Campañas",
+		"title_create": "Crear campaña",
+		"title_edit": "Editar campaña",
+		"fleetName": "Flota",
+		"unitName": "Unidad",
+		"kilometers": "Km",
+		"operationId": "Id Operación",
+		"numberOfPatterns": "Nº Patrones",
+		"numberOfPoints": "Nº Puntos",
+		"realDuration": "Duración Real",
+		"delete": {
+			"message": "Se va a eliminar la campaña seleccionada y toda su información asociada. ¿Está seguro?"
+		},
+		"route": {
+			"title": "Trayectos",
+			"originDestination": "Origen-Destino",
+			"numberOfPoints": "Nº Puntos",
+			"realDuration": "Duración Real",
+			"departureDate": "Fecha Salida",
+			"departureTime": "Hora Salida",
+			"car": "Coche",
+			"component": "Componente",
+			"carPosition": "Posición"
+		}
+	},
+		
+	"points": {
+		"acquisition": "Acquisition points"
+	},
+	
+	"component": {
+		"type_RE": "Reductora",
+		"type_TT": "Turbotransmisor"
+	},
+	
+	"message": {
+		"error": {
+			"delete": {
+				"acquisition": "Se ha producido un error al eliminar el patŕon de adquisición seleccionado",
+				"campaign": "Se ha producido un error al eliminar la campaña seleccionada"
+			},
+			"save": {
+				"pattern" : {
+					"empty_points": "Al menos debe haber un punto de adquisición para el patrón de adquisición.",
+					"same_origin_destination": "Existe el trayecto con origen y destino seleccionado en la lista de patrones.",
+					"empty_origin_destination": "Debe indicarse el origen y el destino."
+				}, 
+				"campaign": {
+					"fleet_unit_not_valid": "Valores Flota y/o Unidad inválidas",
+					"kilometers_not_valid": "Valores inválidos para kilómetros. Debería ser un número mayor que 0.",
+					"operation_id_not_valid": "El ID de operación no debería estar vacío",
+					"empty_routes": "Debe haber por lo menos un trayecto asociado a esta campaña."
+				},
+				"point": { 
+					"periodic_empty_values": "Los valores para el nuevo punto de tipo periódico no son correctos.",
+					"acquisition_type_empty_values": "Debe seleccionarse un tipo de adquisición.",
+					"wrong_values": "Los valores introducidos no son correctos. Deben ser números.",
+					"required_empty_values": "Tiempo de salida y duración total no pueden ser vacíos."
+				},
+				"route": {
+					"empty_values": "Hay valores incorrectos introducidos para la ruta creada/editada.",
+					"component_position_unavailable": "No existen componentes del tipo seleccionado en la posición del coche indicada."
+				}
+			}
+		},
+		"success": {
+			"delete": {
+				"acquisition": "Patrón de adquisición eliminado correctamente",
+				"campaign": "Campaña eliminada correctamente"
+			},
+			"save": {
+				"pattern" : {
+					"ok": "Patrón de adquisición guardado correctamente."
+				},
+				"campaing": {
+					"ok": "Campaña guardada correctamente."
+				}
+			}
+		}
+	}
+}

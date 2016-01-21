@@ -1,0 +1,80 @@
+<div>
+	<script type="text/ng-template" id="editTestPopup.html">
+	<form class="modal__form" id="editTestPopup">
+	    <div class="modal__header">
+	            <h2 class="modal__title" ng-if="testDialog.show == true  && testDialog.editId == true"><translate>test.title_create</translate></h2>
+	            <h2 class="modal__title" ng-if="testDialog.show == true  && testDialog.editId == false"><translate>test.title_edit</translate></h2>
+				<h2 class="modal__title" ng-if="testDialog.show == false  && testDialog.editId == false"><translate>test.title_show</translate></h2>
+	            <a class="modal__close" ng-click="closeEditPopup()"></a>
+		    </div>
+	    
+		<div style="margin-top:1.5em;" class="max-height-240 clear-both">
+				<table aura-table class="workordertable listjs table--light table--zebra notTruncate">    
+			        <caption>
+			         	<div class="text-center">
+			       			<translate>test.title</translate>
+			       		</div>
+			        </caption>
+	      			<thead>
+						<tr>
+							<th class="text-left ctrl--s">id</th>
+	                		<th class="text-left ctrl--s">name</translate></th>
+	               			<th class="text-center ctrl--s">surname</th>
+	                		<th class="text-center ctrl--s">Telefono</th>
+	                		<th class="text-center ctrl--s">address</th>
+						</tr>
+	        		</thead>
+			        <tbody class="listjs__list">
+			        		
+			                <td class="text-center ctrl--xs">
+
+			                    <div>
+									 <div ng-if="testDialog.editId == false" >{{testDialog.id}} </div>
+			                    	<input ng-if="testDialog.editId == true" type="number" ng-model="testDialog.id">
+			                    </div>
+			                </td>
+
+			                 <td  class="text-center ctrl--xs">
+			                    <div>
+									<div ng-if="testDialog.show == false" >{{testDialog.name}} </div>
+			                    	<input ng-if="testDialog.show == true" type="text" ng-model="testDialog.name">
+			                    </div>
+			                </td>
+
+			                <td  class="text-center ctrl--xs">
+			                    <div>
+									<div ng-if="testDialog.show == false" >{{testDialog.surname}} </div>
+			                    	<input ng-if="testDialog.show == true" type="text" ng-model="testDialog.surname">
+			                    </div>
+			                </td>
+			                
+			                <td class="text-center ctrl--xs">
+			                     <div>
+									<div ng-if="testDialog.show == false" >{{testDialog.tlfNumber}} </div>
+			                    	<input ng-if="testDialog.show == true" type="text" ng-model="testDialog.tlfNumber">
+			                    </div>
+			                </td>
+			                    
+			                <td class="text-center ctrl--xs">
+			                     <div>
+									<div ng-if="testDialog.show == false" >{{testDialog.address}} </div>
+			                    	<input ng-if="testDialog.show == true" type="text" ng-model="testDialog.address">
+			                    </div>
+			                </td>
+			                
+						</tr> 
+			        </tbody>
+
+			    </table>
+    		</div>
+
+		<div class="modal__footer clear-both">
+          <ul class="button-list">
+              <li ng-if="testDialog.show == true  && testDialog.editId == false"><button type="submit" ng-click="submitUpdate()" class="button button-rounded button-primary" ng-class="{ 'disabled' : testDialog.isEdit }"><translate>gen.update</translate></button></li>
+              <li ng-if="testDialog.show == true  && testDialog.editId == true"><button href="#" type="submit" ng-click="submit()" class="button button-rounded button-primary" ><translate>gen.save</translate></button></li>
+              <li><a class="button button-secondary button-rounded editForm_close" role="button" ng-click="closeEditPopup()"><translate>gen.cancel</translate></a></li>
+          </ul>
+      </div>
+	</form> 
+</script>
+</div>

@@ -1,0 +1,13 @@
+<div class="container">
+	<div class="tabopts">
+		<ul class="tabopts__list">			
+			<li class="tabopt" ng-class="{'tabopt--current': at('prueba')}" id="tabopt--prueba">
+			<a href="#/translation"> 
+				<span aria-hidden="true" class="tabopt__icon icon-prueba icon--standalone icon-x3"></span>
+				<span class="tabopt__name"><translate>Translation</translate></span>
+			</a></li>
+		</ul>
+	</div>
+
+	<div ng-view class="content" role="main"></div>
+</div>

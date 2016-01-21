@@ -1,0 +1,83 @@
+<div class="max1200">
+	
+		<table aura-table class="workordertable listjs table--light table--zebra truncate">    
+	        <caption>
+	            <div id="addTest" class="caption--button--left">
+	                <a href="" ng-click="dialogControl.createTest()" class="button button-rounded button-secondary button-xs" role="button"><translate>test.createButton</translate></a>
+  				</div>
+			    
+	         	<div class="text-center">
+	       			<translate>Translation</translate>
+	       		</div>
+	        </caption>
+	        <thead>
+	            <tr>
+	                <th class="text-left ctrl--s"  ng-click="sortType = 'id'; sortReverse = !sortReverse";>App</th>
+	                <th class="text-left ctrl--s" ng-click="sortType = 'name'; sortReverse = !sortReverse";>Language</translate></th>
+	                <th class="text-center ctrl--s" ng-click="sortType = 'surname'; sortReverse = !sortReverse";>Key</th>
+	                <th class="text-center ctrl--s" ng-click="sortType = 'tlfNumber'; sortReverse = !sortReverse";>Value</th>
+	                <th class="text-center ctrl--s" ng-click="sortType = 'address'; sortReverse = !sortReverse";>CDate</th>
+	                <th class="text-center ctrl--s" ng-click="sortType = 'address'; sortReverse = !sortReverse";>MDate</th>
+	                <th class="text-center ctrl--s">borrar</th>
+	                <th class="text-center ctrl--s">Editar</th>
+	            </tr>
+	        </thead>
+	        <tbody class="listjs__list" >
+	        		<tr ng-repeat="test in tests | orderBy:sortType:sortReverse | filter:searchTest"" class="workrow" >
+	                <td class="text-left ctrl--s" ng-click = "dialogControl.showTestData(test)">
+	                    <span ng-if="test != undefined" >{{test.id}}</span>
+	                </td>
+	                <td class="text-left ctrl--s" ng-click = "dialogControl.showTestData(test)">
+	                    <span ng-if="test != undefined">{{test.name}}</span>
+	                </td>
+	                <td class="text-center ctrl--s" ng-click = "dialogControl.showTestData(test)">
+	                    <span ng-if="test != undefined">{{test.surname}}</span>
+	                </td>
+	                <td class="text-center ctrl--s" ng-click = "dialogControl.showTestData(test)">
+	                    <span ng-if="test != undefined">{{test.tlfNumber}}</span>
+	                </td>
+	                <td class="text-center ctrl--s" ng-click = "dialogControl.showTestData(test)">
+		             	<span ng-if="test != undefined">{{test.address}}</span>                 
+	                </td>
+	                
+	                <td class="text-center ctrl--s">
+						<a href ng-click="onDeleteTest(test)" class="icon-delete"></a>
+	          		</td> 
+	          		
+	          		<td class="text-center ctrl--s">
+						<a href ng-click="dialogControl.editTest(test)" class="icon-edit"></a>
+	          		</td> 
+				</tr> 
+	        </tbody>
+	        <edit-test-dialog control="dialogControl" on-close="getTests()"></edit-test-dialog> 
+	    </table>
+	    <input type="text" placeholder="Filtrar test" ng-model="searchTest">  
+	    <select name="select" id="select" ng-model="select">
+      		  	<option ng-repeat="test in tests2" value="{{test.id}}">{{test.name}}</option>
+   		</select>
+   		<a href ng-click="refreshTests()">Aceptar</a>
+   		<a href ng-click="getTests()">Limpiar</a>
+		<div class="sample" align="center">	  
+   		
+		</div>  
+  
+	    <edit-test-dialog control="dialogControl" on-close="getTests()"></edit-test-dialog> 
+		
+		</div>
+</div>
+
+<script type="text/ng-template" id="testDeleteDialog.html">
+    <form class="modal__form">
+        <div class="modal__header">
+        	<h2 class="modal__title"><translate>gen.confirmation</translate></h2>
+        	<div class="modal__close" ng-click="closeThisDialog()"></div>
+        </div>
+        <div class="modal__content"><translate>test.delete.message</translate></div>
+        <div class="modal__footer">
+            <ul class="button-list">
+                <li><button type="submit" class="button button-primary button-rounded deleteForm_close" ng-click="confirmDeleteTest()"><translate>test.delete</translate></button></li>
+                <li><a class="button button-secondary button-rounded" role="button" ng-click="closeThisDialog()"><translate>test.cancel</translate></a></li>
+            </ul>
+        </div>
+    </form>
+</script>

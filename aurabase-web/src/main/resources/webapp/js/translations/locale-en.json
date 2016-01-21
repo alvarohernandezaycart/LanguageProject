@@ -1,0 +1,137 @@
+{
+	"gen": {
+		"acquisition": "Acquisition",
+		"num_acquisition_points": "Num. Acquisition points",
+		"test": "Test",
+		"origin_and_destination": "Origin - destination",
+		"origin": "Origin",
+		"destination": "Destination",
+		"num_acquisition_points": "Num. point acquisition pattern",
+		"num_acquisition_patterns": "Num. acquisition patterns",
+		"total_points": "Total Points",
+		"real_duration": "Real duration",
+		
+		"add_new": "Add new",
+		"confirmation": "Confirmation",
+		"delete": "Delete",
+		"cancel": "Cancel",
+
+		"campaignTitle": "Campaign",
+
+		"save": "Save",
+		"update": "Update",
+		
+		"time_from_output": "Time from output(minutes)",
+		"total_duration": "Total duration (minutes)",
+		"acquisition_type": "Acquisition type",
+		"time_between_acquisitions": "Time between acquisitions (minutes)",
+		"acquisition_duration": "Acquisition duration (seconds)",
+		"real_duration_format": "Real duration (mm:ss)",
+		"continously": "Continuous",
+		"periodic": "Periodic",
+		
+		"acq_type_1": "Continous",
+		"acq_type_2": "Periodic",
+		"fleet": "Fleet",
+		"unit": "Unit",
+		"kilometers": "Kilometers",
+		"operation_id": "Operation ID",
+		"table": "table"
+	},
+	
+	"patterns": {
+		"title": "Patterns",
+		"title_create": "Acquisition pattern creation",
+		"title_edit": "Acquisition pattern edition",
+		"acquisition": "Acquisition patterns",
+		
+		"delete": {
+			"message": "This acquisition pattern and all info associated will be deleted. Are you sure?"
+		}
+		
+	},
+
+	"campaign": {
+		"headerTitle": "Campaigns List",
+		"createButton": "Add new",
+		"title": "Campaigns",
+		"title_create": "Add Campaign",
+		"title_edit": "Edit Campaign",
+		"fleetName": "Fleet",
+		"unitName": "Unit",
+		"kilometers": "Km",
+		"operationId": "Operation Id",
+		"numberOfPatterns": "No. of Patterns",
+		"numberOfPoints": "No. of Points",
+		"realDuration": "Actual Duration",
+		"delete": {
+			"message": "This campaign and all info associated will be deleted. Are you sure?"
+		},
+		"route": {
+			"title": "Routes",
+			"originDestination": "Origin-Destination",
+			"numberOfPoints": "No. Points",
+			"realDuration": "Real duration",
+			"departureDate": "Departure Date",
+			"departureTime": "Departure Time",
+			"car": "Car",
+			"component": "Component",
+			"carPosition": "Position"
+		}
+	},
+	
+	"points": {
+		"acquisition": "Acquisition points"
+	},
+	
+	"component": {
+		"type_RE": "Gear Box",
+		"type_TT": "Turbotransmissor"
+	},
+	
+	"message": {
+		"error": {
+			"delete": {
+				"acquisition": "Error deleting acquisition pattern",
+				"campaign": "Error deleting campaign"
+			},
+			"save": {
+				"pattern": {
+					"empty_points": "There should be at least one point of acquisition for the acquisition pattern.",
+					"same_origin_destination": "There are same origin-destination in pattern list.",
+					"empty_origin_destination": "The origin and the destination must be selected."
+				},
+				"campaign": {
+					"fleet_unit_not_valid": "Fleet and/or Unit not valid",
+					"kilometers_not_valid": "Invalid kilometers value. It should be a number greater than zero.",
+					"operation_id_not_valid": "Operation ID should not be empty",
+					"empty_routes": "There should be at least one route associated to this Campaign."
+				},
+				"point": { 
+					"periodic_empty_values": "They are some values in periodic point without value.",
+					"acquisition_type_empty_values": "The acquisition type must be selected.",
+					"wrong_values": "The entered values ​​are incorrect. They must be numbers.",
+					"required_empty_values": "Time from output and total duration can not be empty."
+				},
+				"route": {
+					"empty_values": "[EN] Hay valores incorrectos introducidos para la ruta creada/editada.",
+					"component_position_unavailable": "[EN] No existen componentes del tipo seleccionado en la posición del coche indicada."
+				}
+			}
+		},
+		"success": {
+			"delete": {
+				"acquisition": "Acquisition pattern delete correctly",
+				"campaign": "Campaign deleted successfully"
+			},
+			"save": {
+				"pattern" : {
+					"ok": "Acquisition patterns save correctly."
+				},
+				"campaing": {
+					"ok": "Campaign save correctly."
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,93 @@
+(function (require) {
+	"use strict";
+	require.config({
+		paths: {
+			'text': '../bower_components/requirejs-text/text',
+			'angular': '../bower_components/angular/angular',
+			'angular-route': '../bower_components/angular-route/angular-route',
+			'angular-sanitize': '../bower_components/angular-sanitize/angular-sanitize',
+			'angular-i18n-es': '../bower_components/angular-i18n/angular-locale_es',
+			'translate': '../bower_components/angular-translate/angular-translate',
+			'translate-static-loader': '../bower_components/angular-translate-loader-static-files/angular-translate-loader-static-files',
+			'translate-handler-log': '../bower_components/angular-translate-handler-log/angular-translate-handler-log',
+			'domready': '../bower_components/requirejs-domready/domReady',
+			'Faker': '../bower_components/Faker/Faker',
+			'moment': '../bower_components/moment/moment',
+			'moment-timezone': '../bower_components/moment-timezone/builds/moment-timezone-with-data',
+			'numeral': '../bower_components/numeral/numeral',
+			'bootstrap.position': '../bower_components/angular-ui-bootstrap/src/position/position',
+			'bootstrap.datepicker': '../bower_components/angular-ui-bootstrap/src/datepicker/datepicker',
+			'bootstrap.bindHtml': '../bower_components/angular-ui-bootstrap/src/bindHtml/bindHtml',
+			'bootstrap.typeahead': '../bower_components/angular-ui-bootstrap/src/typeahead/typeahead',
+			'sockjs': '../non_bower_components/socksjs/sockjs-0.3.4',
+			'stompjs': '../bower_components/stomp-websocket/lib/stomp',
+			'depot': '../bower_components/depot/depot',
+			'aura': '../bower_components/aura-directives/build/directives',
+			'jquery': '../bower_components/jquery/dist/jquery',
+			'jquery-collapse': '../bower_components/jQuery-Collapse/src/jquery.collapse',
+			'easy-responsive-tabs': '../non_bower_components/easyResponsiveTabs/easyResponsiveTabs.min',
+			'flot': '../bower_components/flot',
+			'flotSideBar': '../bower_components/aura-directives/build/docu/non_bower_components/flotSideBar/flotSideBarPlugin',
+			'select2': '../bower_components/select2/select2',
+			'underscore': '../bower_components/underscore/underscore',
+			'highcharts': '../bower_components/highcharts/highcharts',
+		    'highcharts-more': '../bower_components/highcharts/highcharts-more',
+		    'highcharts-exporting': '../bower_components/highcharts/modules/exporting',
+		    'pikaday': '../bower_components/pikaday/pikaday',
+		    'pikaday-jquery': '../bower_components/pikaday/plugins/pikaday.jquery',
+		    'jquery-maskedinput': '../bower_components/jquery-maskedinput/src/jquery.maskedinput',
+		    'parsley': '../bower_components/parsleyjs/dist/parsley',
+		    'parsley-en': '../bower_components/parsleyjs/src/i18n/en',
+		    'parsley-es': '../bower_components/parsleyjs/src/i18n/es',
+		    'waitMe': '../bower_components/wait-me/src/waitMe' , 
+		    'popup': '../bower_components/jquery-popup-overlay/jquery.popupoverlay',
+		    'messenger': '../bower_components/messenger/build/js/messenger',
+			'ngDialog': '../bower_components/ngDialog/js/ngDialog.min',
+			'angularChart': '../bower_components/angular-chart.js/dist/angular-chart.min',
+			'chart': '../bower_components/Chart.js/Chart.min'
+			
+		},
+		shim: {
+			'angular': { deps: [], exports: 'angular' },
+			'angular-route': {deps: ['angular']},
+		    'angular-sanitize': {deps: ['angular']},
+			'angular-i18n-es': {deps: ['angular']},
+			'translate': {deps: ['angular']},
+			'translate-static-loader': {deps: ['translate']},
+			'translate-handler-log': {deps: ['translate']},
+			'bootstrap.position': {deps: ['angular']},
+			'bootstrap.bindHtml': {deps: ['angular']},
+			'bootstrap.datepicker': {deps: ['angular', 'bootstrap.position']},
+			'bootstrap.typeahead': {deps: ['angular', 'bootstrap.position', 'bootstrap.bindHtml']},
+			'sockjs': {exports: 'SockJS'},
+			'stompjs': {deps: ['sockjs'], exports: 'Stomp'},
+			'jquery-collapse': {deps: ['jquery']},
+			'easy-responsive-tabs': {deps: ['jquery']},
+			'flot/jquery.flot': {deps: ['jquery']},
+		    'flot/jquery.flot.time': {deps: ['jquery', 'flot/jquery.flot']},
+		    'flot/jquery.flot.stack': {deps: ['jquery', 'flot/jquery.flot']},
+		    'flotSideBar': {deps: ['jquery', 'flot/jquery.flot']},
+		    'select2': {deps: ['jquery']},
+		    'highcharts': {deps: ['jquery']},
+		    'highcharts-more': {deps: ['highcharts']},
+		    'highcharts-exporting': {deps: ['highcharts']},
+		    'pikaday-jquery': {deps: ['jquery', 'pikaday']},
+		    'jquery-maskedinput': {deps: ['jquery']},
+		    'parsley-en': {deps: ['jquery']},
+		    'parsley-es': {deps: ['jquery']},
+		    'popup': {deps: ['jquery']},
+		    'messenger': {deps: ['jquery']},
+		    'parsley': {deps: ['jquery', 'parsley-en', 'parsley-es']},
+		    'waitMe' : {deps: ['jquery']},
+		    'ngDialog': {deps: ['angular']},
+		    'angularChart': {deps: ['angular']},
+		    'chart': {deps: ['angular']}
+		}
+	});
+
+	require(['jquery','angular','domready', 'app'], function (jquery, angular, domReady, app) {
+	  domReady(function () {
+	      app(modules).bootstrap(document);
+	    });
+	});
+}(require));

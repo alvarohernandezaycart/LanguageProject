@@ -1,0 +1,47 @@
+{
+    "test": {
+		"createButton": "Add Test",
+		"title": "Tests",
+		"title_create": "Add Campaign",
+		"title_edit": "Edit Campaign"
+	},
+	
+	"gen": {
+		"acquisition": "Acquisition",
+		"num_acquisition_points": "Num. Acquisition points",
+		"test": "Test",
+		"origin_and_destination": "Origin - destination",
+		"origin": "Origin",
+		"destination": "Destination",
+		"num_acquisition_points": "Num. point acquisition pattern",
+		"num_acquisition_patterns": "Num. acquisition patterns",
+		"total_points": "Total Points",
+		"real_duration": "Real duration",
+		
+		"add_new": "Add new",
+		"confirmation": "Confirmation",
+		"delete": "Delete",
+		"cancel": "Cancel",
+
+		"campaignTitle": "Campaign",
+
+		"save": "Save",
+		"update": "Update",
+		
+		"time_from_output": "Time from output(minutes)",
+		"total_duration": "Total duration (minutes)",
+		"acquisition_type": "Acquisition type",
+		"time_between_acquisitions": "Time between acquisitions (minutes)",
+		"acquisition_duration": "Acquisition duration (seconds)",
+		"real_duration_format": "Real duration (mm:ss)",
+		"continously": "Continuous",
+		"periodic": "Periodic",
+		
+		"acq_type_1": "Continous",
+		"acq_type_2": "Periodic",
+		"fleet": "Fleet",
+		"unit": "Unit",
+		"kilometers": "Kilometers",
+		"operation_id": "Operation ID"
+	}
+}

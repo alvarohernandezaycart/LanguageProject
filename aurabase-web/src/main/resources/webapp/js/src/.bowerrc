@@ -1,0 +1,6 @@
+{
+  "directory": "bower_components",
+  "registry": {
+    "search": ["http://ciserver.nemsolutions.com:8000","https://bower.herokuapp.com"]
+  }
+}
